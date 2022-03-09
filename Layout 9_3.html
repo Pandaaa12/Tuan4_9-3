@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hehe</title>
+    <style>
+        *{
+            margin: auto;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-image: url(../hehe/5.jpg);
+        }
+
+        .wrapper{
+            height: 700px;
+            width: 1089px;
+            border: 1px solid  black;
+            background-color: rgb(61, 213, 233);
+        }
+
+        nav{
+            height: 50px;
+            width: 100%;
+            border-bottom:1px solid black ;
+            line-height: 50px;
+            
+        }
+
+        header{
+            width: 100%;
+            height: 150px;
+            background-image: url(../hehe/1.jpg);
+        }
+
+        .content{
+            height: 300px;
+            width: 100%;
+            border-bottom: 1px solid black;
+        }
+
+        aside{
+            height: 100%;
+            width: 40%;
+            border-right: 1px solid black;
+            float: left;
+        }
+
+        section{
+            height: 100%;
+            width: 60%;
+            float: left;
+        }
+
+        .menu li{
+            height: 100%;
+            width: 130px;
+            float: left;
+            line-height: 50px;
+            text-indent: 20px;
+            list-style: none;
+            position: relative;
+        }
+
+        a{
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .menu li:hover{
+            background-color: black;
+        }
+
+        li:hover>a{
+            font-style: italic;
+        }
+
+        .menu li .submenu{
+            display: none;
+            position: absolute;
+        }
+
+        .menu li:hover .submenu{
+            display: block;
+        }
+       
+        nav span form #btnGo{
+            padding: 3px;
+            border-radius: 50%;
+        }
+
+        nav span form #txtEmail{
+            padding: 3px;
+            border-radius: 10%;
+        }
+
+        .wrapper header p{
+            font-size: 50px;
+            text-shadow: 10px 20px 20px;
+            text-align: center;
+        }
+
+        .wrapper header:hover p{
+            transform: rotate(25deg);
+        }
+
+        footer{
+            height: 100px;
+            width: 100%;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <nav>
+            <ul class="menu">
+                <li><a href="http://sv.iuh.edu.vn">HOME</a></li>
+                <li><a href="">SERVICES</a></li>
+                <li><a href="">CONTACT</a>
+                        <ul class ="submenu">
+                            <li><a href="">PHONE</a></li>
+                            <li><a href="">INTERNET</a></li>
+                            <li><a href="">TIVI</a></li>
+                        </ul>
+                </li>
+                <li><a href="">ABOUT</a></li>
+                <li><a href="">HELP</a></li>
+            </ul>
+            <span>
+                <form action="" method="post">
+                    <label for="Email">Email: </label>
+                    <input type="email" name"txtEmail" id"txtEmail" required placeholder="nhap email" minlength="20">
+                    <input type="submit" value="GO" id="btnGo">
+                </form>
+            </span>
+
+        </nav>
+
+        <header>
+            <p>GAME SHOW</p>    
+        </header>
+
+        <div class="content">
+            <aside>
+                <article>
+                    <h2>Hoat Dong Doan</h2>
+                    <img src="4.jpg" width="424px" height="70px">
+                </article>
+                <article>
+                    <h2>Hoat Dong Hoc Tap</h2>
+                    <img src="../hehe/2.jpg" width="424px" height="70px">
+                </article>
+                <article>
+                    <h2>Hoat Dong Mua He Xanh</h2>
+                    <img src="../hehe/3.jpg" width="424px" height="70px">
+                </article>
+    
+            </aside>
+
+             <section>
+                <h2>Dang Ky Danh Sach</h2>
+                <form action="dangky.php"   method="post">
+                    <fieldset>
+                        <legend>Thong tin cua ban</legend>
+                        <label for="lblHoTen">Ho ten: </label>
+                        <input type="text" name="txtHT" id="txtHT" required placeholder="Nhap ho ten"   minlength="20">  <br><br>
+                        <label for="lblGioiTinh">Gioi Tinh: </label>
+                        <input type="radio" name="radNam" id="radNam" value="nam">
+                        <label>Nam</label>
+                        <input type="radio" name="radNu" id="radNu" value="nu">
+                        <label>Nu</label><br><br>
+                        <label for="NgaySinh">Ngay Sinh: </label>
+                        <input type="date"  name="txtDate"  id="txtDate" required placeholder="Ngay Sinh" minlength="20" pattern="dd/MM/yy"><br><br>
+                        <label for="MSSV">MSSV: </label>
+                        <input type="text" name="txtMSSV" id="txtMSSV"  required placeholder="Nhap MSSV"    minlength="20"><br><br>
+                        <input type="submit"    value="GO">
+                    </fieldset>
+                </form>
+            </section>
+
+        </div>
+
+        <footer></footer>
+
+    </div>
+
+</body>
+</html>
